@@ -1,9 +1,17 @@
-# Homebrew Tap for Hearth
+# Homebrew Tap
 
-Official Homebrew tap for [Hearth](https://github.com/Blinks44/hearth).
+Homebrew casks and formulae by [Blinks44](https://github.com/Blinks44).
 
-## Install
+## Usage
 
-```bash
-brew install --cask blinks44/tap/hearth
+```sh
+brew tap blinks44/tap
 ```
+
+## Available packages
+
+| Package | Type | Install |
+| --- | --- | --- |
+| [Hearth](https://github.com/Blinks44/hearth) | Cask | `brew install --cask blinks44/tap/hearth` |
+
+Casks and formulae are updated automatically by each project's release workflow.
