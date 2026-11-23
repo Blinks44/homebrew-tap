@@ -4,8 +4,8 @@ cask "monny" do
 
   url "https://github.com/Blinks44/monny/releases/download/v#{version}/Monny.dmg"
   name "Monny"
-  desc "Native macOS menu bar system monitor, battery charge limit, and AI quota tracker"
-  homepage "https://monny.moduix.dev"
+  desc "Menu bar system monitor, battery charge limit, and AI quota tracker"
+  homepage "https://monny.moduix.dev/"
 
   livecheck do
     url :url
@@ -13,17 +13,10 @@ cask "monny" do
   end
 
   auto_updates true
-  depends_on macos: :sequoia
   depends_on arch: :arm64
+  depends_on macos: :sequoia
 
   app "Monny.app"
-
-  caveats <<~EOS
-    Monny is signed without Apple notarization.
-    If macOS blocks the first launch, open System Settings -> Privacy & Security
-    and click "Open Anyway", or run:
-      xattr -dr com.apple.quarantine /Applications/Monny.app
-  EOS
 
   zap trash: [
     "~/Library/Application Support/Monny",
@@ -32,4 +25,11 @@ cask "monny" do
     "~/Library/Preferences/blinks44.monny.plist",
     "~/Library/Saved Application State/blinks44.monny.savedState",
   ]
+
+  caveats <<~EOS
+    Monny is signed without Apple notarization.
+    If macOS blocks the first launch, open System Settings -> Privacy & Security
+    and click "Open Anyway", or run:
+      xattr -dr com.apple.quarantine /Applications/Monny.app
+  EOS
 end
