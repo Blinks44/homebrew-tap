@@ -1,9 +1,8 @@
 cask "hearth" do
-  version "1.0.0-rc.1"
-  sha256 "c84943433cfaf5b2168d95f15817f034e4e413157492b28d4d585c9f87031ea6"
+  version "1.0.0"
+  sha256 "f9df3f999f106b4d236018801e4406ca3966c6e99632647cca0b340749786fa2"
 
-  url "https://github.com/Blinks44/hearth/releases/download/v#{version}/hearth-#{version}.dmg",
-      verified: "github.com/Blinks44/hearth/"
+  url "https://github.com/Blinks44/hearth/releases/download/v#{version}/hearth-#{version}.dmg"
   name "Hearth"
   desc "Local desktop app for developer tools, versions, PATH, Docker, Kubernetes, and AI agents"
   homepage "https://hearth.moduix.dev"
@@ -13,7 +12,7 @@ cask "hearth" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Hearth.app"
 
