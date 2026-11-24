@@ -1,6 +1,6 @@
 # Homebrew Tap
 
-Homebrew casks and formulae by [Blinks44](https://github.com/Blinks44).
+Official Homebrew tap for native open-source apps by [Sergey V. (Blinks44)](https://github.com/Blinks44).
 
 ## Usage
 
@@ -8,10 +8,18 @@ Homebrew casks and formulae by [Blinks44](https://github.com/Blinks44).
 brew tap blinks44/tap
 ```
 
-## Available packages
+## Available Casks
 
-| Package | Type | Install |
+| App | Description | Install |
 | --- | --- | --- |
-| [Hearth](https://github.com/Blinks44/hearth) | Cask | `brew install --cask blinks44/tap/hearth` |
+| [**Hearth**](https://hearth.moduix.dev) | Local dev environment dashboard for runtimes, PATH, projects, Docker, Kubernetes, databases, and AI agents | `brew install --cask blinks44/tap/hearth` |
+| [**Monny**](https://monny.moduix.dev) | Native macOS menu bar system monitor, battery charge limit, port finder, and AI quota tracker | `brew install --cask blinks44/tap/monny` |
+| [**Rebind**](https://rebind.moduix.dev) | Native macOS input remapper for keyboards, multi-button and Logitech HID++ mice, smooth scrolling, Trackpad, and Magic Mouse | `brew install --cask blinks44/tap/rebind` |
 
-Casks and formulae are updated automatically by each project's release workflow.
+Casks are updated automatically by each repository's release workflow with verified SHA-256 checksums.
+
+## Upgrading
+
+```sh
+brew upgrade --cask hearth monny rebind
+```
