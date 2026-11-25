@@ -1,6 +1,6 @@
 cask "hearth" do
-  version "1.0.2"
-  sha256 "334d12eef02b650e309259a0787335b3c97d61aa83d74fc1271b1a524a3f5e15"
+  version "1.0.3"
+  sha256 "08ac278cab5654075bc7dce9ac509ab4df77f268104016d4ac9cc331909a0da6"
 
   url "https://github.com/Blinks44/hearth/releases/download/v#{version}/hearth-#{version}.dmg"
   name "Hearth"
