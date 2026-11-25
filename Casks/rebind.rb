@@ -1,6 +1,6 @@
 cask "rebind" do
-  version "1.3.2"
-  sha256 "170b3a3f2ddd7aaaaeff03fbc32675995e8d9658439cbec33ebc21b745999e85"
+  version "1.4.0"
+  sha256 "c039f4cdfb4d8387b5fe5977c5d8d6064a79c0471b98943c903241c2a55ee56f"
 
   url "https://github.com/Blinks44/rebind/releases/download/v#{version}/Rebind.dmg"
   name "Rebind"
