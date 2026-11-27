@@ -1,6 +1,6 @@
 cask "monny" do
-  version "1.8.4"
-  sha256 "25dbf083bbf72e1675f30b972f869f900c1743698f9b66f73e7b9e430ced9477"
+  version "1.8.5"
+  sha256 "7b606fb828222294dd6817d3b56ceba4cb7f81dd19ca66be4181fac6218197b6"
 
   url "https://github.com/Blinks44/monny/releases/download/v#{version}/Monny.dmg"
   name "Monny"
