@@ -1,8 +1,11 @@
 cask "hearth" do
-  version "1.0.5"
-  sha256 "c5cc01701ed6a0ffe56f3f0201c25b1f03cc9be86d0e191425c55c328b99e3d8"
+  arch arm: "arm64", intel: "amd64"
 
-  url "https://github.com/Blinks44/hearth/releases/download/v#{version}/hearth-#{version}.dmg"
+  version "1.1.0"
+  sha256 arm:   "0f322e8e53a1aacb6f7f4ac1797abc80851a53b730ab31a19d2cc4b818d0dca6",
+         intel: "3f00620bc7cc7026236df7273bd61748e65a93a39e150b0cdc43c0e2ea40a146"
+
+  url "https://github.com/Blinks44/hearth/releases/download/v#{version}/hearth-#{version}-#{arch}.dmg"
   name "Hearth"
   desc "Local desktop app for developer tools, versions, PATH, Docker, Kubernetes, and AI agents"
   homepage "https://hearth.moduix.dev"
@@ -16,11 +19,14 @@ cask "hearth" do
 
   app "Hearth.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Hearth.app"]
+  end
+
   caveats <<~EOS
     Hearth is currently signed ad hoc without Apple notarization.
-    If macOS blocks the first launch, open System Settings -> Privacy & Security
-    and click "Open Anyway", or run:
-      xattr -dr com.apple.quarantine /Applications/Hearth.app
+    This cask removes the macOS quarantine attribute during installation so Hearth launches without Gatekeeper prompts.
   EOS
 
   zap trash: [
